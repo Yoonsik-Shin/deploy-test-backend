@@ -12,10 +12,10 @@ services:
     ports:
       - 3000:3000
 
-  my-database:
-    image: mysql:latest
-    environment:
-      MYSQL_DATABASE: 'mydocker03'
-      MYSQL_ROOT_PASSWORD: '0000'
-    ports:
-      - 3306:3306
+  # my-database:
+  #   image: mysql:latest
+  #   environment:
+  #     MYSQL_DATABASE: 'mydocker03'
+  #     MYSQL_ROOT_PASSWORD: '0000'
+  #   ports:
+  #     - 3306:3306
