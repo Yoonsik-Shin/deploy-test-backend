@@ -3,14 +3,14 @@ setps:
   - name: docker/compose:1.29.0
     args:
       - -f
-      - deploy-test-backend/backend/docker-compose.prod.yaml
+      - backend/docker-compose.prod.yaml
       - build
 
   # 2단계 (docker-compose -f docker-compose.prod.yaml push)
   - name: docker/compose:1.29.0
     args:
       - -f
-      - deploy-test-backend/backend/docker-compose -f docker-compose.prod.yaml
+      - backend/docker-compose -f docker-compose.prod.yaml
       - push
 
   # 3단계 (kubectl set image deployment/mybackend my-backend03-sha256-1=asia.gcr.io/curious-sandbox-370715/my-backend03:8.0)
@@ -18,7 +18,7 @@ setps:
     args:
       - set
       - image
-      - deploy-test-backend/backend/deployment/mybackend
+      - backend/deployment/mybackend
       - my-backend03-sha256-1=asia.gcr.io/curious-sandbox-370715/my-backend03:9.0
     env:
       - CLOUDSDK_COMPUTE_ZONE=asia-northeast3
