@@ -2,6 +2,7 @@ version: '3.7'
 
 services:
   my-backend:
+    image: asia.gcr.io/curious-sandbox-370715/my-backend03:9.0
     build:
       context: .
       dockerfile: Dockerfile

@@ -9,6 +9,7 @@ import { FileModule } from './apis/file/file.module';
 import { ProductModule } from './apis/products/product.module';
 import { ProductCategoryModule } from './apis/productsCategory/productCategory.module';
 import { UserModule } from './apis/users/user.module';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [
@@ -35,5 +36,6 @@ import { UserModule } from './apis/users/user.module';
       logging: true,
     }),
   ],
+  controllers: [AppController],
 })
 export class AppModule {}
