@@ -1,4 +1,4 @@
-setps:
+steps:
   # 1단계 (docker-compose -f docker-compose.prod.yaml build)
   - name: docker/compose:1.29.0
     args:
@@ -19,7 +19,7 @@ setps:
       - set
       - image
       - deployment/mybackend
-      - my-backend03-sha256-1=asia.gcr.io/curious-sandbox-370715/my-backend03:9.0
+      - my-backend03-sha256-1=asia.gcr.io/curious-sandbox-370715/my-backend03:10.0
     env:
       - CLOUDSDK_COMPUTE_ZONE=asia-northeast3
       - CLOUDSDK_CONTAINER_CLUSTER=autopilot-cluster-1

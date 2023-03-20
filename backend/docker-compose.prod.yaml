@@ -2,14 +2,14 @@ version: '3.7'
 
 services:
   my-backend:
-    image: asia.gcr.io/curious-sandbox-370715/my-backend03:9.0
+    image: asia.gcr.io/curious-sandbox-370715/my-backend03:10.0
     build:
       context: .
       dockerfile: Dockerfile
     # volumes:
     #   - ./src:/myfolder/src
-    env_file:
-      - ./.env.prod
+    # env_file:
+    #   - ./.env.prod
     ports:
       - 3000:3000
 
